@@ -1,0 +1,92 @@
+<!-- Import Polymer -->
+<link rel="import" href="../../polymer/polymer.html">
+
+<!-- Define your custom element -->
+<polymer-element name="glitch-element" attributes="src">
+
+  <style>
+  </style>
+
+  <template>
+    <canvas id="glitch"></canvas>
+  </template>
+
+  <script src="glitch-canvas.min.js"></script>
+  <script>
+      Polymer('glitch-element', {
+          // Fires when an instance of the element is created
+          created: function() {},
+
+          // Fires when the "<polymer-element>" has been fully prepared
+          ready: function() {
+            var glitchCanvas = this.$.glitch; 
+            var glitchCtx = this.$.glitch.getContext('2d');
+
+            var img = new Image();
+            this.image = img;
+
+
+            var that = this;
+
+            img.addEventListener('load', function() {
+              glitchCanvas.width = this.width;
+              glitchCanvas.height = this.height;
+
+              that.glitchImage();
+            });
+
+            img.src = this.src;
+            // glitchCtx.drawImage(this.$.image);
+            // var imageData = glitchCtx.getImageData(
+            //   0, 0,
+            //   my_canvas.clientWidth, my_canvas.clientHeight
+            // );
+            // var parameters = {
+            //   amount: 10,
+            //   seed: 45,
+            //   iterations:
+            //   30,
+            //   quality: 30
+            // };
+          },
+
+          // Fires when the element was inserted into the document
+          attached: function() {},
+
+          // Fires when the element’s initial set of children and siblings are guaranteed to exist
+          domReady: function() {
+          },
+
+          // Fires when the element was removed from the document
+          detached: function() {},
+
+          // Fires when an attribute was added, removed, or updated
+          attributeChanged: function(attr, oldVal, newVal) {},
+          
+          glitchImage: function() {
+            var ctx = this.$.glitch.getContext('2d');
+            ctx.drawImage(this.image, 0, 0);
+            
+            var imageData = ctx.getImageData(
+              0,
+              0,
+              this.$.glitch.clientWidth,
+              this.$.glitch.clientHeight
+            );
+            
+            var parameters = { 
+              amount: 10,
+              seed: 45,
+              iterations: 10,
+              quality: 30
+            };
+
+            glitch(imageData, parameters, function(glitchData) {
+              console.log('test');
+              ctx.putImageData(glitchData, 0, 0);
+            });
+          }
+      });
+  </script>
+
+</polymer-element>
