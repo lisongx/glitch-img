@@ -16,7 +16,11 @@ module.exports = function(grunt) {
             src: [
                 'bower_components/**/*',
                 '!bower_components/my-repo/**/*',
-                'demo/*', 'src/*', 'index.html', 'CNAME'
+                'demo/*',
+                'src/*',
+                'index.html',
+                'feynman.jpg',
+                'CNAME'
             ]
         },
         'replace': {
