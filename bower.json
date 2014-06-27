@@ -1,9 +1,9 @@
 {
-    "name": "glitch-element",
+    "name": "glitch-img",
     "version": "0.0.0",
-    "description": "Glitch your image element",
+    "description": "Glitch your <img>",
     "license": "MIT",
-    "main": "dist/glitch-element.html",
+    "main": "dist/glitch-img.html",
     "keywords": [
         "polymer",
         "web-components"
