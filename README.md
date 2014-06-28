@@ -1,6 +1,6 @@
 # &lt;glitch-img&gt;
 
-A polymer component to glitch your \<img\>, wrapper around [glitch-canvas](https://github.com/snorpey/glitch-canvas)
+A polymer component to glitch your \<img\>, wrapper for [glitch-canvas](https://github.com/snorpey/glitch-canvas).
 
 ## Demo
 
