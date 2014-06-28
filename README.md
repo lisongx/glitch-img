@@ -39,10 +39,10 @@ $ bower install glitch-img --save
 Attribute     | Options     | Default          | Description
 ---           | ---         | ---              | ---
 `src`         | *string*    | `bar`            | your \<img\> src
-`seed`        | *string*    | `random integer` | integer between 0 and 99
-`quality`     | *string*    | `random integer` | integer between 0 and 99
-`amount`      | *string*    | `random integer` | integer between 0 and 99
-`iterations`  | *string*    | `random integer` | integer
+`seed`        | *int*       | `random integer` | integer between 0 and 99
+`quality`     | *int*       | `random integer` | integer between 0 and 99
+`amount`      | *int*       | `random integer` | integer between 0 and 99
+`iterations`  | *int*       | `random integer` | integer
 
 check out this awesome [jpg-glitch](http://snorpey.github.io/jpg-glitch/)
 experiment to get a better understanding of the values
