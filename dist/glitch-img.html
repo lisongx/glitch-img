@@ -1,8 +1,7 @@
-<!-- Import Polymer -->
 <link rel="import" href="../../polymer/polymer.html">
 
-<!-- Define your custom element -->
-<polymer-element name="glitch-element" attributes="src">
+
+<polymer-element name="glitch-img" attributes="src width height amount seed iterations quality">
 
   <style>
   </style>
@@ -13,18 +12,22 @@
 
   <script src="glitch-canvas.min.js"></script>
   <script>
-      Polymer('glitch-element', {
+      Polymer('glitch-img', {
+          // glitch parameters
+           // + Math.round(Math.random() * 20),
+          amount: 5 + Math.random() * 5,
+          seed: 10 + Math.random() * 50,
+          iterations: 15 + Math.random() * 5,
+          quality: 30,
           // Fires when an instance of the element is created
           created: function() {},
 
-          // Fires when the "<polymer-element>" has been fully prepared
           ready: function() {
             var glitchCanvas = this.$.glitch; 
             var glitchCtx = this.$.glitch.getContext('2d');
 
             var img = new Image();
             this.image = img;
-
 
             var that = this;
 
@@ -36,33 +39,31 @@
             });
 
             img.src = this.src;
-            // glitchCtx.drawImage(this.$.image);
-            // var imageData = glitchCtx.getImageData(
-            //   0, 0,
-            //   my_canvas.clientWidth, my_canvas.clientHeight
-            // );
-            // var parameters = {
-            //   amount: 10,
-            //   seed: 45,
-            //   iterations:
-            //   30,
-            //   quality: 30
-            // };
           },
 
-          // Fires when the element was inserted into the document
           attached: function() {},
 
-          // Fires when the element’s initial set of children and siblings are guaranteed to exist
           domReady: function() {
           },
 
-          // Fires when the element was removed from the document
           detached: function() {},
 
-          // Fires when an attribute was added, removed, or updated
-          attributeChanged: function(attr, oldVal, newVal) {},
-          
+          attributeChanged: function(attr, oldVal, newVal) {
+          },
+
+          // observe attr change and update glitch
+          observe: {
+            src: "update",
+            amount: "update",
+            seed: "update",
+            iterations: "update",
+            quality: "update"
+          },
+
+          update: function(oldval, newval) {
+            this.glitchImage();
+          },
+
           glitchImage: function() {
             var ctx = this.$.glitch.getContext('2d');
             ctx.drawImage(this.image, 0, 0);
@@ -75,14 +76,13 @@
             );
             
             var parameters = { 
-              amount: 10,
-              seed: 45,
-              iterations: 10,
-              quality: 30
+              amount: this.amount,
+              seed: this.seed,
+              iterations: this.iterations,
+              quality: this.quality
             };
 
             glitch(imageData, parameters, function(glitchData) {
-              console.log('test');
               ctx.putImageData(glitchData, 0, 0);
             });
           }

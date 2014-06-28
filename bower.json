@@ -1,19 +1,23 @@
 {
-    "name": "glitch-img",
-    "version": "0.0.0",
-    "description": "Glitch your <img>",
-    "license": "MIT",
-    "main": "dist/glitch-img.html",
-    "keywords": [
-        "polymer",
-        "web-components"
-    ],
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components"
-    ],
-    "dependencies": {
-        "polymer": "Polymer/polymer#~0.3.2"
-    }
+  "name": "glitch-img",
+  "version": "0.0.0",
+  "description": "Glitch your <img>",
+  "license": "MIT",
+  "main": "dist/glitch-img.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.2"
+  },
+  "devDependencies": {
+    "core-header-panel": "Polymer/core-header-panel#~0.3.3",
+    "core-scroll-header-panel": "Polymer/core-scroll-header-panel#~0.3.3"
+  }
 }

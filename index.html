@@ -1,19 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>&lt;glitch-img&gt;</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <!-- Importing Web Component's Polyfill -->
     <script src="bower_components/platform/platform.js"></script>
 
-    <!-- Importing Custom Elements -->
     <link rel="import" href="src/glitch-img.html">
+
+    <style type="text/css" media="screen">
+    </style>
 </head>
 <body>
-
-    <!-- Using Custom Elements -->
-    <glitch-img src="feynman.jpg"></glitch-img>
-
+      <h2>&lt;img&gt;</h2>
+        <img src="feynman.jpg"/>
+      <h2>&lt;glitch-img&gt;</h2>
+        <glitch-img src="feynman.jpg"/>
 </body>
 </html>
