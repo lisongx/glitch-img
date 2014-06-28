@@ -1,22 +1,18 @@
-# &lt;my-repo&gt;
+# &lt;glitch-img&gt;
 
-> A bare minimum custom element starter-kit using [Polymer](http://www.polymer-project.org/).
->
-> Looking for a working example? Check [hello-world-polymer](https://github.com/webcomponents/hello-world-polymer).
+A polymer component to glitch your \<img\>, wrapper around [glitch-canvas](https://github.com/snorpey/glitch-canvas)
 
 ## Demo
 
-[Check it live!](http://my-user.github.io/my-repo)
+[Check it live!](http://www.kunjinkao.org/glitch-img)
 
 ## Install
 
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install my-repo --save
+$ bower install glitch-img --save
 ```
-
-Or [download as ZIP](https://github.com/my-user/my-repo/archive/master.zip).
 
 ## Usage
 
@@ -29,66 +25,27 @@ Or [download as ZIP](https://github.com/my-user/my-repo/archive/master.zip).
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/my-repo/dist/my-element.html">
+    <link rel="import" href="bower_components/glitch-img/dist/glitch-img.html">
     ```
 
 3. Start using it!
 
     ```html
-    <my-element></my-element>
+    <glitch-img src="beautifulpic.jpg"></glitch-img>
     ```
 
 ## Options
 
-Attribute     | Options     | Default      | Description
----           | ---         | ---          | ---
-`foo`         | *string*    | `bar`        | Lorem ipsum dolor.
+Attribute     | Options     | Default          | Description
+---           | ---         | ---              | ---
+`src`         | *string*    | `bar`            | your \<img\> src
+`seed`        | *string*    | `random integer` | integer between 0 and 99
+`quality`     | *string*    | `random integer` | integer between 0 and 99
+`amount`      | *string*    | `random integer` | integer between 0 and 99
+`iterations`  | *string*    | `random integer` | integer
 
-## Methods
-
-Method        | Parameters   | Returns     | Description
----           | ---          | ---         | ---
-`unicorn()`   | None.        | Nothing.    | Magic stuff appears.
-
-## Events
-
-Event         | Description
----           | ---
-`onsomething` | Triggers when something happens.
-
-## Development
-
-In order to run it locally you'll need to fetch some dependencies and a basic server setup.
-
-* Install [Bower](http://bower.io/) & [Grunt](http://gruntjs.com/):
-
-    ```sh
-    $ [sudo] npm install -g bower grunt-cli
-    ```
-
-* Install local dependencies:
-
-    ```sh
-    $ bower install && npm install
-    ```
-
-* To test your project, start the development server and open `http://localhost:8000`.
-
-    ```sh
-    $ grunt server
-    ```
-
-* To build the distribution files before releasing a new version.
-
-    ```sh
-    $ grunt build
-    ```
-
-* To provide a live demo, send everything to `gh-pages` branch.
-
-    ```sh
-    $ grunt deploy
-    ```
+check out this awesome [jpg-glitch](http://snorpey.github.io/jpg-glitch/)
+experiment to get a better understanding of the values
 
 ## Contributing
 
@@ -97,10 +54,6 @@ In order to run it locally you'll need to fetch some dependencies and a basic se
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-
-## History
-
-For detailed changelog, check [Releases](https://github.com/my-user/my-repo/releases).
 
 ## License
 
