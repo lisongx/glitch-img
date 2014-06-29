@@ -1,30 +1,93 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>glitch your &lt;img&gt;</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A polymer component to glitch your img tag">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <script src="bower_components/platform/platform.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>    
     <link rel="import" href="src/glitch-img.html">
 
+    <!--foundation -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.0/css/normalize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.0/css/foundation.min.css">
+
+    <!--highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/solarized_dark.min.css">
     <style type="text/css" media="screen">
+      .useage p {
+        margin: 0.3em;
+      }
+      
+      footer {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        
+      }
     </style>
 </head>
 <body>
-    <h1>glitch your &lt;img&gt;</h1>
-    <h2>&lt;img&gt;</h2>
-    <img src="feynman.jpg"/>
-    <h2>&lt;glitch-img&gt;</h2>
-    <glitch-img src="feynman.jpg"></glitch-img>
-    <p>
-      <a href="https://github.com/kunjinkao/glitch-img/blob/master/README.md">
-        docs
-      </a>
-    </p>
+
+    <div class="row">
+      <h1 class="text-center">glitch your &lt;img&gt;</h1>
+      <div class="small-10 small-centered medium-4 medium-uncentered medium-offset-2 columns">
+        <p>&lt;img&gt;</p>
+        <img src="feynman.jpg"/>
+      </div>
+      <div class="small-10 small-centered medium-4 medium-uncentered columns">
+        <p>&lt;glitch-img&gt;</p>
+        <glitch-img src="feynman.jpg"></glitch-img>
+      </div>
+    </div>
+
+    <div class="row useage">
+      <div class="small-10 small-centered columns">
+        <h2>Install</h2>
+        <p>Install the component using <a href="http://bower.io/">Bower</a>:</p>
+        <pre><code class="bash">$ bower install glitch-img --save</code></pre>
+      </div>
+
+      <div class="small-10 small-centered columns">
+        <h2>Usage</h2>
+
+        <div>
+        <p>Import Web Components' polyfill:</p>
+        <pre><code class="html">&lt;script src=&quot;bower_components/platform/platform.js&quot;&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <p>Import Custom Element:</p>
+        <div>
+        <pre><code class="html">&lt;link rel=&quot;import&quot; href=&quot;bower_components/glitch-img/dist/glitch-img.html&quot;&gt;</code></pre>
+        </div>
+
+        <p>Start using it!:</p>
+        <div>
+        <pre><code class="html">&lt;glitch-img src=&quot;beautifulpic.jpg&quot;&gt;&lt;/glitch-img&gt;</code></pre>
+        </div>
+
+        <p>
+          More on <a href="https://github.com/kunjinkao/glitch-img/blob/master/README.md">docs</a>
+        </p>
+      </div>
+    </div>
+
+
+<!--github ribbons on corner -->
+<a href="https://github.com/kunjinkao/glitch-img"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <footer class="text-center">
+      // glitch-img was created by <a href="http://notimportant.org"</footer>Sean Lee</a>
+    </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.0/js/foundation.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    $(document).foundation();
+  </script>
 </body>
 </html>
