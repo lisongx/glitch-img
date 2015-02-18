@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
+<html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>glitch your &lt;img&gt;</title>
@@ -9,8 +9,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <script src="bower_components/platform/platform.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>    
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
     <link rel="import" href="src/glitch-img.html">
 
     <!--foundation -->
@@ -23,11 +23,11 @@
       .useage p {
         margin: 0.3em;
       }
-      
+
       footer {
         margin-top: 20px;
         margin-bottom: 15px;
-        
+
       }
     </style>
 </head>
@@ -38,21 +38,15 @@
       <div class="small-10 small-centered medium-5 medium-uncentered medium-offset-1 columns">
         <p>&lt;img&gt;</p>
         <img src="feynman.jpg"/>
+        <p>
+          <a href="https://commons.wikimedia.org/wiki/File:RichardFeynman-PaineMansionWoods1984_copyrightTamikoThiel_bw.jpg
+">Photo</a> by Tamiko Thiel/CC BY SA 3.0
+        </p>
+
       </div>
       <div class="small-10 small-centered medium-5 medium-uncentered columns">
         <p>&lt;glitch-img&gt;</p>
         <glitch-img src="feynman.jpg"></glitch-img>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-6 small-offset-2 columns">
-        <p>
-          <small>
-          <a href="https://commons.wikimedia.org/wiki/File:RichardFeynman-PaineMansionWoods1984_copyrightTamikoThiel_bw.jpg
-">Photo</a> by Tamiko Thiel/CC BY SA
-        </small>
-      </p>
       </div>
     </div>
 
@@ -68,7 +62,7 @@
 
         <div>
         <p>Import Web Components' polyfill:</p>
-        <pre><code class="html">&lt;script src=&quot;bower_components/platform/platform.js&quot;&gt;&lt;/script&gt;</code></pre>
+        <pre><code class="html">&lt;script src=&quot;bower_components/webcomponentsjs/webcomponents.min.js&quot;&gt;&lt;/script&gt;</code></pre>
         </div>
 
         <p>Import Custom Element:</p>
@@ -92,7 +86,7 @@
 <a href="https://github.com/kunjinkao/glitch-img"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
     <footer class="text-center">
-      // glitch-img was created by <a href="http://notimportant.org"</footer>Sean Lee</a>
+      glitch-img was created by <a href="http://notimportant.org"</footer>Sean Lee</a>
     </footer>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.0/js/foundation.min.js"></script>

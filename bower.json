@@ -6,16 +6,19 @@
   "main": "dist/glitch-img.html",
   "keywords": [
     "polymer",
-    "web-components"
+    "web-components",
+    "web-component",
+    "glitch"
   ],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components"
   ],
+  "homepage": "http://www.kunjinkao.org/glitch-img/",
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.2"
+    "polymer": "Polymer/polymer#^0.5.4",
+    "webcomponentsjs": "~0.5.5"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
